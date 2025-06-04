@@ -6,15 +6,15 @@ import React from 'react';
 const Hero = () => {
     return (<>
         <section
-            className="relative flex sm:flex-row flex-col w-full h-screen mx-auto bg-hero-mobile overflow-hidden">
+            className="relative flex sm:flex-row flex-col w-screen h-screen mx-auto bg-hero-mobile overflow-hidden">
             <div
-                className="absolute inset-0 sm:top-[250px] top-[150px] lg:top-[150px] xl:top-[250px] px-6 max-w-7xl mx-auto flex flex-row items-start justify-between gap-3 z-10">
-                <div className="flex flex-col justify-center items-center mt-5 ml-3">
+                className="absolute inset-0 ml-6 sm:top-[150px] top-[150px] lg:top-[150px] xl:top-[250px] w-full px-8 mx-auto flex flex-row items-start justify-center gap-3">
+                <div className="flex flex-col justify-center items-center mt-5 ml-0">
                     <div className="w-5 h-5 rounded-full bg-[#0a0a0a] sm:hidden"/>
                     <div className="w-1 sm:h-80 h-40 bw-gradient sm:hidden"/>
                 </div>
                 <div
-                    className="absolute xs:bottom-10 bottom-32 w-full
+                    className="absolute xs:bottom-10 bottom-32 w-screen
           flex justify-center items-center">
                     <a href="#about">
                         <div
@@ -35,7 +35,7 @@ const Hero = () => {
                         </div>
                     </a>
                 </div>
-                <div>
+                <div className="absolute left-0.5 -translate-y-0">
                     <h1 className={`${styles.heroHeadText} text-#EADDFF font-poppins uppercase`}
                         style={{color: '#003739'}}>
                         Hi, I'm
@@ -48,7 +48,7 @@ const Hero = () => {
                     <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>Innovation and Quality collide.</p>
                 </div>
 
-                <div className="w-screen flex flex-col items-start justify-center sm:-ml-[3rem] xxs:mt-4"></div>
+                <div className="w-full flex flex-col items-center justify-center    sm:-ml-[3rem] xxs:mt-4"></div>
             </div>
 
             <div className="absolute top-0 left-0 w-full h-full z-0">
@@ -61,14 +61,8 @@ const Hero = () => {
                     backgroundImage: `linear-gradient(135deg, rgba(208, 188, 255, 0.2) 60%, #04363E 60%)`
                 }}
             ></div>
-
-            {/* Your image comes here. Feel free to remove image if you don't plan to have one.*/}
             <div>
-                <img
-                    className="absolute bottom-0 ml-[50vw] lg:ml-[70vw] md:ml-[60vw] xmd:ml-[60vw] 2xl:ml-[83vw] sm:h-[90vh] md:h-[70vh] xl:h-[80vh]"
-                    src={alex}
-                    alt="alex"
-                />
+                <img className="absolute bottom-0 right-0.5 transform -translate-x-0 sm:h-[90vh] md:h-[70vh] xl:h-[80vh]" src={alex} alt="alex" />
             </div>
 
 

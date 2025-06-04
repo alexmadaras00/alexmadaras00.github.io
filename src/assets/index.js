@@ -4,7 +4,8 @@ import whiteabstract from './backgrounds/white-abstract.png';
 import worldmap from './backgrounds/world-map.png';
 import back from './backgrounds/back.png';
 import mobileVideo from './backgrounds/background_mobiles.mp4';
-
+import vradesWatch from './backgrounds/vrades_watch.png'
+import sfhWatch from './backgrounds/sfh_pics.png'
 
 import logo from './logo/logo.png';
 import logotext from './logo/logo-text-black.png';
@@ -34,6 +35,7 @@ import management from './icons/management.png';
 import gameDev from './icons/game.png';
 
 import css from './tech/css.png';
+import azure from './tech/azure.png';
 import docker from './tech/docker.png';
 import figma from './tech/figma.png';
 import git from './tech/git.png';
@@ -58,6 +60,13 @@ import jira from './tech/jira.png';
 import python from './tech/python.png';
 import software_dev from './tech/software_dev.png';
 import fullstack from './tech/fullstack.png';
+import sigrid from './tech/sigrid.png';
+import gitlab from './tech/gitlab.png';
+import rapidapi from './tech/rapidapi.png'
+import intelij from './tech/intelij.png';
+import insomnia from './tech/insomnia.png';
+import jsonPic from './tech/json.png';
+import yt from './tech/yt.png';
 
 import coverhunt from './company/coverhunt.png';
 import dcc from './company/dcc.png';
@@ -77,18 +86,48 @@ import nyeusi from './projects/nyeusi.png';
 import space from './projects/space-hub.png';
 import eia from './projects/eia.png';
 import azul2 from './projects/azul2.png';
-import vrades from './projects/vrades-mockups.png';
 import datascience from './projects/datascience.png';
 import table from './projects/tables.png';
 import star from './projects/star_schema.png';
+import trip_palette from './projects/trip-palette.png';
+import ell from './projects/ell.png'
+import vrades from './projects/vrades_logo.png';
+import spy_for_hire from './projects/spy_for_hire.png';
+import iq_quiz_app from './projects/iq_quiz_app.png';
+import azul from './projects/azul.png';
+
+import spring from './skills/spring.png';
+import ai from './skills/ai.png';
+import architecture_design from './skills/architecture_design.png';
+import challenges from './skills/challenges.png';
+import cicd from './skills/cicd.png';
+import code_quality from './skills/code_quality.png';
+import documentation from './skills/documentation.png';
+import implementation from './skills/implementation.png';
+import mobile from './skills/mobile.png';
+import patterns from './skills/patterns.png';
+import problem from './skills/problem.png';
+import role from './skills/role.png';
+import solution from './skills/solution.png';
+import story from './skills/story.png';
+import tdd from './skills/tdd.png';
+import technology from './skills/technologies.png';
+import uni from './skills/uni.png';
+
 
 
 export {
+    azure,
+    azul,
     analysis,
     fullstack,
     software_dev,
     azul2,
+    trip_palette,
     android,
+    iq_quiz_app,
+    vrades,
+    spy_for_hire,
     bwmap,
     uvt,
     erasmus,
@@ -99,7 +138,6 @@ export {
     twente,
     nairobi,
     whiteabstract,
-    vrades,
     worldmap,
     mobileVideo,
     logo,
@@ -120,6 +158,22 @@ export {
     pineappleHover,
     eia,
     menu,
+    ai,
+    architecture_design,
+    challenges,
+    cicd,
+    code_quality,
+    documentation,
+    implementation,
+    mobile,
+    patterns,
+    problem,
+    role,
+    solution,
+    story,
+    tdd,
+    technology,
+    uni,
     ing,
     management,
     visualization,
@@ -127,6 +181,7 @@ export {
     resume,
     send,
     sendHover,
+    spring,
     css,
     docker,
     figma,
@@ -142,6 +197,8 @@ export {
     firebase,
     android_studio,
     python,
+    vradesWatch,
+    sfhWatch,
     colab,
     java,
     postgresql,
@@ -153,10 +210,18 @@ export {
     leaderboard,
     math,
     movie,
+    yt,
     nyeusi,
     space,
     coverhunt,
     dcc,
     kelhel,
     microverse,
+    ell,
+    sigrid,
+    gitlab,
+    rapidapi,
+    intelij,
+    insomnia,
+    jsonPic
 };
