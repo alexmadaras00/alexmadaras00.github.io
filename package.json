@@ -2,7 +2,7 @@
   "name": "alexmadaras",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://alexmadaras00.github.io/alexmadaras/src/",
+  "homepage": "https://alexmadaras00.github.io",
   "type": "module",
   "scripts": {
     "dev": "vite",
