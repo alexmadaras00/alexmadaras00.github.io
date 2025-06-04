@@ -63,6 +63,8 @@ import {
     spy_for_hire,
     iq_quiz_app,
     docker,
+    docker_skill,
+    sql_skill,
     javascript,
     jsonPic,
     insomnia,
@@ -70,9 +72,6 @@ import {
     uni,
     sfhWatch
 } from '../assets';
-import {json} from "react-router-dom";
-import tech from "../components/Tech.jsx";
-import {watch} from "@babel/cli/lib/babel/watcher.js";
 
 
 export const navLinks = [{
@@ -128,38 +127,41 @@ const technologies = [
     },
 
 ];
-const experiences = [{
-    title: 'AI Engineer Intern',
-    company_name: 'ING Nederland',
-    icon: ing,
-    iconBg: '#333333',
-    date: 'Apr 2024 - Nov 2024',
-}, {
-    title: 'Android Developer Intern',
-    company_name: 'Victory Square Partners',
-    icon: victory_square,
-    iconBg: '#333333',
-    date: 'Aug 2021 - Sep 2021',
-},]
-const academic = [{
-    title: 'Master Software Technology',
-    company_name: 'University of Twente',
-    icon: twente,
-    iconBg: '#333333',
-    date: 'Sep 2022 - March 2025',
-}, {
-    title: 'Erasmus Exchange in Lisbon',
-    company_name: 'IADE - Universidade Europeia ',
-    icon: erasmus,
-    iconBg: '#333333',
-    date: 'Sep 2020 - Feb 2021',
-}, {
-    title: 'Bachelor Computer Science',
-    company_name: 'West University of Timisoara',
-    icon: uvt,
-    iconBg: '#333333',
-    date: 'Sep 2019 - Aug 2022',
-}];
+
+const exp = [
+    {
+        title: 'AI Engineer Intern',
+        company_name: 'ING Nederland',
+        icon: ing,
+        iconBg: '#333333',
+        date: 'Apr 2024 - Nov 2024',
+    },{
+        title: 'Master Software Technology',
+        company_name: 'University of Twente',
+        icon: twente,
+        iconBg: '#333333',
+        date: 'Sep 2022 - March 2025',
+    },
+    {
+        title: 'Android Developer Intern',
+        company_name: 'Victory Square Partners',
+        icon: victory_square,
+        iconBg: '#333333',
+        date: 'Aug 2021 - Sep 2021',
+    },
+    {
+        title: 'Erasmus Exchange in Lisbon',
+        company_name: 'IADE - Universidade Europeia ',
+        icon: erasmus,
+        iconBg: '#333333',
+        date: 'Sep 2020 - Feb 2021',
+    }, {
+        title: 'Bachelor Computer Science',
+        company_name: 'West University of Timisoara',
+        icon: uvt,
+        iconBg: '#333333',
+        date: 'Sep 2019 - Aug 2022',
+    }];
 
 const projects = [{
     id: 'project-trippalette',
@@ -193,7 +195,7 @@ const projects = [{
         description: 'Trip Palette follows thoroughly the Microservices approach. Split into services, the code base is highly maintainable and scalable, where for each business functionality' + 'there is one corresponding service. Moreover, the app follows closely the Service Oriented Architecture (SOA) principles, with 3 layers for each service: data, domain and presentation.'
     }, {
         title: 'Docker',
-        image: docker,
+        image: docker_skill,
         description: 'In check with the SOA principles, Trip Palette is deployed on Docker containers, ensuring a 24/7 availability. Each service has its own container, which generates a Docker image.'
     }, {
         title: 'AI',
@@ -201,7 +203,7 @@ const projects = [{
         description: 'Among the APIs integrated, an AI model is incorporated through Eden API. The user sends details of his information strictly relevant to a trip, while the app retrieves the answer from the AI model trough a REST call.'
     }, {
         title: 'SQL',
-        image: sql,
+        image: sql_skill,
         description: 'The web application incorporates database for each service, storing trip, user information. The SQL dialect used is Postgre.'
     }]
 
@@ -432,4 +434,4 @@ const projects = [{
         }]
     },];
 
-export {services, technologies, academic, projects, skills};
+export {services, technologies, exp, projects, skills};

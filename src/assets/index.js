@@ -113,6 +113,8 @@ import story from './skills/story.png';
 import tdd from './skills/tdd.png';
 import technology from './skills/technologies.png';
 import uni from './skills/uni.png';
+import sql_skill from './skills/sql_skill.png'
+import docker_skill from './skills/docker_skill.png'
 
 
 
@@ -131,6 +133,8 @@ export {
     bwmap,
     uvt,
     erasmus,
+    sql_skill,
+    docker_skill,
     datascience,
     star,
     table,

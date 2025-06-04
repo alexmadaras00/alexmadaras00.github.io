@@ -14,7 +14,7 @@ export default function ProjectCard({project}) {
                 <p className="text-white text-lg mt-3">{project.description}</p>
             </div>
             <div className="flex flex-col justify-start p-6 w-1/3">
-                <Link to={`/project/${project.id}`}>
+                <Link to={`/projects/${project.id}`}>
                     <button
                         className="bg-blueChill rounded-2xl h-14 w-full text-xl font-mova mb-1 flex justify-center items-center">
                         Check it out!

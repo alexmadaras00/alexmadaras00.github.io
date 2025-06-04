@@ -1,4 +1,4 @@
-import {useNavigate, useParams} from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
 import {projects, skills} from "../constants/index.js";
 import {BallCanvas, Navbar} from "../index.js";
 import logo from "../assets/logo/logo.png";
@@ -6,13 +6,16 @@ import {github, yt} from "../assets/index.js";
 import {motion} from 'framer-motion';
 import ProjectNavigationBar from "./ProjectNavigationBar.jsx";
 import Paragraph from "./Paragraph.jsx";
-import React from "react";
+import React, {useEffect} from "react";
 import tech from "./Tech.jsx";
 import ButtonPortfolio from "./ButtonPortfolio.jsx";
 
 
 export default function ProjectPage() {
 
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to top-left
+    }, []);
     const {id} = useParams();
     console.log(id);
     const project = projects.find(p => p.id === id);
@@ -38,6 +41,18 @@ export default function ProjectPage() {
         if (paragraphCount <= 4) return "grid-cols-2";
         if (paragraphCount > 4) return "grid-cols-3";
     };
+    const indexes = new Set();
+    const randomProjects = [];
+    while (indexes.size < 4) {
+        let randomIndex = Math.floor(Math.random() * projects.length);
+        if (projects[randomIndex].id !== project.id) {
+            indexes.add(randomIndex);
+        }
+    }
+    for (const val of indexes) {
+        randomProjects.push(projects[val]);
+    }
+    console.log("Random projects: " + Array.from(randomProjects));
     return (
         <div className="flex flex-col justify-col bg-eerieBlack align-items-center align-middle ">
             <ProjectNavigationBar/>
@@ -107,6 +122,23 @@ export default function ProjectPage() {
                     })}
                 <ButtonPortfolio onClick={navigateVideoYT} src={yt} text="WATCH IT ON YOUTUBE!"/>
 
+            </div>
+            <h2 className="flex justify-center font-bold font-mova">OTHER PROJECTS</h2>
+            <div className="flex flex-row gap-20 m-10">{
+                randomProjects.map((randomProject, index) => (
+                    <div className="relative group w-60 h-60 rounded-xl overflow-hidden" key={index}>
+                            <Link to={`/projects/${randomProject.id}`}>
+                            <img src={randomProject.image} className="w-full h-full rounded-xl transition-opacity duration-100"
+                                 alt="image"/>
+                            <div
+                                className="absolute inset-0 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-100">
+                                <p className="text-2xl text-white font-mova mx-auto mx-2">{randomProject.name}</p>
+
+                            </div>
+                            </Link>
+                    </div>
+                ))
+            }
             </div>
             <footer className="flex h-full bg-lisbon text-2xl p-5"><a className="mx-auto">© Alex Madaras 2025</a>
             </footer>

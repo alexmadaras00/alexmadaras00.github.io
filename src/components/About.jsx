@@ -57,7 +57,7 @@ function About() {
                         muted
                         loop
                         playsInline
-                        className="max-h-[400px] object-cover rounded-md"
+                        className="h-full object-cover rounded-md"
                     />
                 </div>
 

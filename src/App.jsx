@@ -11,10 +11,12 @@ import {
     Projects,
 } from './index.js';
 import ProjectPage from "./components/ProjectPage.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 const App = () => {
     return (
         <BrowserRouter>
+            <ScrollToTop />
             <Routes>
                 <Route
                     path="/"
@@ -37,7 +39,7 @@ const App = () => {
                                 <Projects/>
                             </div>
                             <div
-                                className="bg-experienceLight bg-cover bg-center bg-no-repeat rounded-tl-[150px] rounded-br-[130px]">
+                                className="bg-hero bg-cover bg-center bg-no-repeat rounded-tl-[150px] rounded-br-[130px]">
                                 <Experience/>
                             </div>
                             <div id="contact" className="relative z-0">
@@ -46,7 +48,7 @@ const App = () => {
                         </div>
                     }
                 />
-                <Route path="/project/:id" element={<ProjectPage/>}/>
+                <Route path="/projects/:id" element={<ProjectPage/>}/>
             </Routes>
         </BrowserRouter>
     );

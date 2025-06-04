@@ -6,7 +6,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import 'react-vertical-timeline-component/style.min.css';
 import { styles } from '../styles';
-import { academic } from '../constants';
+import {exp} from '../constants'
 import { SectionWrapper } from '../hoc';
 import { download, downloadHover, resume } from '../assets';
 import { textVariant } from '../utils/motion';
@@ -15,10 +15,8 @@ import ExperienceCard from "./ExperienceCard.jsx";
 const Experience = () => {
   return (
     <>
+        <h1 className="flex justify-center text-7xl font-mova mx-auto">EXPERIENCES</h1>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} sm:pl-16 pl-[2rem]`}>
-          My path.
-        </p>
         <h2 className={`${styles.sectionHeadText} sm:pl-16 pl-[2rem]`}>
           Education and Experience
         </h2>
@@ -26,7 +24,7 @@ const Experience = () => {
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline className="vertical-timeline-custom-line">
-          {academic.map((experience, index) => (
+          {exp.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
           ))}
           <VerticalTimelineElement
