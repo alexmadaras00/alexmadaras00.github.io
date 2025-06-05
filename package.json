@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist --repo=https://github.com/alexmadaras00/alexmadaras00.github.io",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "build-babel": "babel src -d lib"
   },

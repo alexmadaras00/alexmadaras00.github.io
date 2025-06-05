@@ -3,7 +3,7 @@ import {Link, Route, Routes} from "react-router-dom";
 export default function ProjectCard({project}) {
     return (
         <div
-            className="flex flex-row w-full h-full mr-0.5 rounded-2xl hover:border-2 hover:border-customGreen-10 ">
+            className="flex flex-row w-full h-full mr-0.5 rounded-2xl hover:border-2 hover:border-customGreen-10 transition-all duration-500">
             <img
                 className="w-1/4 h-full rounded-xl"
                 src={project.image}
