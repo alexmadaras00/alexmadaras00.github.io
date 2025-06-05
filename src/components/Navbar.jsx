@@ -29,14 +29,14 @@ const Navbar = () => {
           {/* if you have text you want besides your logo it comes here.
           Otherwise delete this if you don't need it. */}
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-14 mt-2">
+        <ul className="list-none hidden sm:flex flex-row gap-14 mx-2">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
               className={`${
                 active === nav.title ? 'text-french' : 'text-#69896E'
-              } hover:text-taupe text-[21px] font-medium font-mova 
-                uppercase tracking-[3px] cursor-pointer nav-links`}
+              } hover:text-taupe text-[18px] font-medium font-mova 
+                uppercase tracking-[3px] cursor-pointer nav-links mx-1`}
               onClick={() => setActive(nav.title)}>
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
