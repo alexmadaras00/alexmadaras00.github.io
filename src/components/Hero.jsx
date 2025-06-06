@@ -3,7 +3,7 @@ import {styles} from '../styles';
 import {alex, mobileVideo} from '../assets';
 import React from 'react';
 
-const Hero = () => {
+export default function Hero() {
     return (<>
         <section
             className="relative flex sm:flex-row flex-col w-screen h-screen mx-auto bg-hero-mobile overflow-hidden">
@@ -62,7 +62,9 @@ const Hero = () => {
                 }}
             ></div>
             <div>
-                <img className="absolute bottom-0 right-0.5 transform -translate-x-0 sm:h-[90vh] md:h-[70vh] xl:h-[80vh]" src={alex} alt="alex" />
+                <img
+                    className="absolute bottom-0 right-0.5 transform -translate-x-0 sm:h-[90vh] md:h-[70vh] xl:h-[80vh]"
+                    src={alex} alt="alex"/>
             </div>
 
 
@@ -70,4 +72,3 @@ const Hero = () => {
     </>);
 };
 
-export default Hero;

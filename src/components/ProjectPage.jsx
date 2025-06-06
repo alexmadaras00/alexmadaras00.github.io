@@ -9,6 +9,7 @@ import Paragraph from "./Paragraph.jsx";
 import React, {useEffect} from "react";
 import tech from "./Tech.jsx";
 import ButtonPortfolio from "./ButtonPortfolio.jsx";
+import Footer from "./Footer.jsx";
 
 
 export default function ProjectPage() {
@@ -124,24 +125,23 @@ export default function ProjectPage() {
 
             </div>
             <h2 className="flex justify-center font-bold font-mova">OTHER PROJECTS</h2>
-            <div className="flex flex-row gap-20 m-10">{
+            <ul className="grid grid-cols-4 gap-20 m-10">{
                 randomProjects.map((randomProject, index) => (
-                    <div className="relative group w-60 h-60 rounded-xl overflow-hidden" key={index}>
+                    <li className="relative group w-60 h-60 rounded-xl overflow-hidden" key={index}>
                             <Link to={`/projects/${randomProject.id}`}>
                             <img src={randomProject.image} className="w-full h-full rounded-xl transition-opacity duration-100"
                                  alt="image"/>
                             <div
                                 className="absolute inset-0 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-100">
-                                <p className="text-2xl text-white font-mova mx-auto mx-2">{randomProject.name}</p>
+                                <p className="text-2xl text-white font-mova mx-auto">{randomProject.name}</p>
 
                             </div>
                             </Link>
-                    </div>
+                    </li>
                 ))
             }
-            </div>
-            <footer className="flex h-full bg-lisbon text-2xl p-5"><a className="mx-auto">© Alex Madaras 2025</a>
-            </footer>
+            </ul>
+            <Footer/>
         </div>
     );
 }

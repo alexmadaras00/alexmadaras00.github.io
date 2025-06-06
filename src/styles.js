@@ -32,4 +32,5 @@ const styles = {
     'sm:text-[18px] text-[16px] text-taupe uppercase tracking-wider font-semibold font-poppins',
 };
 
+
 export { styles };

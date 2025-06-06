@@ -12,11 +12,12 @@ import {
 } from './index.js';
 import ProjectPage from "./components/ProjectPage.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
+import Story from "./components/Story.jsx";
 
 const App = () => {
     return (
         <BrowserRouter>
-            <ScrollToTop />
+            <ScrollToTop/>
             <Routes>
                 <Route
                     path="/"
@@ -27,7 +28,7 @@ const App = () => {
                                 <Hero/>
                             </div>
                             <div id="about"
-                                 className="relative z-0 w-screen bg-about bg-cover bg-center min-h-screen rounded-0">
+                                 className="relative z-0 w-screen bg-about bg-cover bg-center rounded-0">
                                 <About/>
                             </div>
                             <div id="tech"
@@ -39,7 +40,7 @@ const App = () => {
                                 <Projects/>
                             </div>
                             <div
-                                className="bg-hero bg-cover bg-center bg-no-repeat rounded-tl-[150px] rounded-br-[130px]">
+                                className="bg-hero bg-cover bg-center bg-no-repeat">
                                 <Experience/>
                             </div>
                             <div id="contact" className="relative z-0">
@@ -49,6 +50,7 @@ const App = () => {
                     }
                 />
                 <Route path="/projects/:id" element={<ProjectPage/>}/>
+                <Route path="/about/who-am-i" element={<Story />}/>
             </Routes>
         </BrowserRouter>
     );

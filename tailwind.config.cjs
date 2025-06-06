@@ -71,6 +71,7 @@ export default {
                 overcameBold: ['Overcame Bold'],
                 overcameOutline: ['Overcame Outline'],
                 poppins: ['Poppins', 'sans-serif'],
+                timesNewRoman: ['Times New Roman', 'serif'],
             },
         },
     },

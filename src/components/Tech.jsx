@@ -21,7 +21,7 @@ const Tech = () => {
                                         key={skill.name}
                             >
                                 <motion.a
-                                    whileHover={{scale: 1.1}}
+                                    whileHover={{scale: 1.4}}
                                     className="text-2xl text-white contrast-200"
                                 >{skill.name}</motion.a>
                                 <BallCanvas icon={skill.icon}/>

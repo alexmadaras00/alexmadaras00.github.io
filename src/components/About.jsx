@@ -1,5 +1,6 @@
 import React from 'react';
 import alexVideo from '../assets/Alex.mp4';
+import {Link} from "react-router-dom";
 
 function About() {
     return (
@@ -41,7 +42,7 @@ function About() {
                 {/* HOBBIES */}
                 <div className="bg-customGreen-200 rounded-lg p-4 shadow-md">
                     <h2 className="text-center font-bold font-mova text-2xl text-[#69896E] mb-2">HOBBIES</h2>
-                    <p>
+                    <p >
                         Outside of tech, I’m co-building a travel startup 🧳 with friends, and running a history-focused
                         Instagram channel—PocketPedia 📜—where I simplify complex historical topics into short, engaging reels 🎥.
                         I am a certified Tour Guide in my hometown - Timisoara. I also love learning languages 🗣️ and exploring cultures 🌏.
@@ -76,9 +77,11 @@ function About() {
                     <p className="text-[#69896E] mb-4">
                         Read about my full journey, values, and how I became who I am.
                     </p>
-                    <a href="/story" className="bg-[#69896E] text-white font-bold py-2 px-4 rounded hover:bg-[#506b52] transition duration-200">
+                    <Link to="/about/who-am-i">
+                    <button className="bg-[#69896E] text-white font-bold py-2 px-4 rounded hover:bg-[#506b52] transition duration-200">
                         Read More / My Story →
-                    </a>
+                    </button>
+                    </Link>
                 </div>
             </div>
         </div>
