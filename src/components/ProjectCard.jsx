@@ -1,27 +1,29 @@
-import {Link, Route, Routes} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default function ProjectCard({project}) {
+export default function ProjectCard({ project }) {
     return (
-        <div
-            className="flex flex-row w-full h-full mr-0.5 rounded-2xl hover:border-2 hover:border-customGreen-10 transition-all duration-500">
+        <div className="flex flex-col md:flex-row w-full h-auto rounded-2xl border border-transparent hover:border-customGreen-10 transition-all duration-500 bg-[#00363a] overflow-hidden">
+            {/* Image */}
             <img
-                className="w-1/4 h-full rounded-xl"
+                className="w-full md:w-1/3 h-auto object-cover rounded-t-2xl md:rounded-t-none md:rounded-l-2xl"
                 src={project.image}
                 alt={project.alt}
             />
-            <div className="flex flex-col justify-between p-6 w-3/4 bg-[#00363a]">
-                <h1 className="text-white font-mova text-2xl">{project.name}</h1>
-                <p className="text-white text-lg mt-3">{project.description}</p>
-            </div>
-            <div className="flex flex-col justify-start p-6 w-1/3">
-                <Link to={`/projects/${project.id}`}>
-                    <button
-                        className="bg-blueChill rounded-2xl h-14 w-full text-xl font-mova mb-1 flex justify-center items-center">
-                        Check it out!
-                    </button>
-                </Link>
-            </div>
 
+            {/* Text Content */}
+            <div className="flex flex-col justify-between p-4 md:p-6 w-full">
+                <h1 className="text-white font-mova text-2xl mb-2">{project.name}</h1>
+                <p className="text-white text-base md:text-lg">{project.description}</p>
+
+                {/* Button */}
+                <div className="mt-4 md:mt-6">
+                    <Link to={`/projects/${project.id}`}>
+                        <button className="bg-blueChill rounded-2xl h-12 w-full text-lg font-mova text-white">
+                            Check it out!
+                        </button>
+                    </Link>
+                </div>
+            </div>
         </div>
-    )
+    );
 }

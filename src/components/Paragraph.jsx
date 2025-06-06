@@ -4,7 +4,7 @@ export default function Paragraph({paragraph}) {
 
     return (
         <div className="flex flex-col m-10">
-            <img src={paragraph.image} className="w-1/4 h-1/5 flex mx-auto" alt="image"/>
+            <img src={paragraph.image} className="w-20 h-20 flex mx-auto" alt="image"/>
             <h1 className="text-2xl font-bold font-mova mx-auto m-4">{paragraph.title.toString().toUpperCase()}</h1>
             <p>{cleanedText}</p>{
             link && (<a href={link} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block underline

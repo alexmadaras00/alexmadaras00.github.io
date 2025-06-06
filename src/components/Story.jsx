@@ -1,46 +1,58 @@
 import ProjectNavigationBar from "./ProjectNavigationBar.jsx";
 import alexNature from "../assets/personal/alexNature.png";
 import Footer from "./Footer.jsx";
-import Paragraph from "./Paragraph.jsx";
 import {storyParagraphs} from "../constants/index.js";
 import StoryParagraph from "./StoryParagraph.jsx";
 import alexRandom from '../assets/personal/alexRandom.jpg'
 
 export default function Story() {
-
     return (
-        <div className="flex flex-col bg-eerieBlack items-center align-middle h-full w-full min-h-screen">
+        <div className="flex flex-col bg-eerieBlack items-center min-h-screen w-full">
             <ProjectNavigationBar/>
-            <div className="relative flex flex-col h-full w-full mt-20 px-4 min-h-full">
-                <h1 className="flex text-white-100 font-mova mx-auto items-center font-bold text-4xl">WHO AM I?</h1>
-                <div className="flex flex-row w-full justify-center mx-20 px-4 ">
-                    <ul className="flex flex-col justify-between gap-10 mt-80 mb-20">
-                        <li className="w-80 h-80 mx-auto">
-                            <img src={alexNature} alt="alexNature"
-                                 className="flex justify-center  items-center mx-auto rounded-2xl"/>
+
+            <div className="flex flex-col w-full mt-24 px-4 gap-8">
+                <h1 className="text-white-100 font-mova text-center font-bold text-3xl sm:text-4xl">
+                    WHO AM I?
+                </h1>
+
+                <div className="flex flex-col  mt-4 px-2">
+                    <blockquote
+                        className="flex text-center mx-auto  justify-center text-xl sm:text-2xl font-timesNewRoman font-bold text-white-100 mb-6">
+                        "DO EVERY ACT OF YOUR LIFE AS IF IT WERE THE LAST"
+                        <br/> – MARCUS AURELIUS
+                    </blockquote>
+
+                    <div className="flex flex-col gap-6 px-2">
+                        {storyParagraphs.slice(0,3).map((paragraph, index) => (
+                            <StoryParagraph key={index} paragraph={paragraph}/>
+                        ))}
+                    </div>
+                    <ul className="flex flex-col justify-center sm:flex-row gap-4 sm:gap-10 items-center my-5">
+                        <li className="w-full max-w-xs">
+                            <img
+                                src={alexNature}
+                                alt="alexNature"
+                                className="w-full h-auto rounded-2xl shadow-md"
+                            />
                         </li>
-                        <li className="w-80 h-80 mx-auto">
-                            <img src={alexRandom} alt="alexRandom"
-                                 className="flex justify-center  items-center mx-auto rounded-2xl"/>
+                        <li className="w-full max-w-xs">
+                            <img
+                                src={alexRandom}
+                                alt="alexRandom"
+                                className="w-full h-auto rounded-2xl shadow-md"
+                            />
                         </li>
                     </ul>
-                    <div className="flex flex-col w-full mt-20 ">
-                        <a className="flex justify-center mt-10 font-timesNewRoman text-2xl font-bold items-center">"DO
-                            EVERY ACT OF YOUR LIFE
-                            AS IT
-                            WOULD BE THE LAST"<br/> - MARCUS AURELIUS</a>
-                        <div className="flex flex-col">{
-                            storyParagraphs.map((paragraph, index) => (
-                                <StoryParagraph key={index} paragraph={paragraph}/>
-                            ))
-                        }
-                        </div>
-
+                    <div className="flex flex-col gap-6 px-2">
+                        {storyParagraphs.slice(3,7).map((paragraph, index) => (
+                            <StoryParagraph key={index} paragraph={paragraph}/>
+                        ))}
                     </div>
                 </div>
             </div>
+
             <Footer/>
         </div>
-    );
-
+    )
+        ;
 }

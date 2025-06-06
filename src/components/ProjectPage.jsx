@@ -1,147 +1,131 @@
-import {Link, useNavigate, useParams} from "react-router-dom";
-import {projects, skills} from "../constants/index.js";
-import {BallCanvas, Navbar} from "../index.js";
+import React, { useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import { projects } from "../constants/index.js";
+import { BallCanvas, Navbar } from "../index.js";
 import logo from "../assets/logo/logo.png";
-import {github, yt} from "../assets/index.js";
-import {motion} from 'framer-motion';
+import { github, yt } from "../assets/index.js";
+import { motion } from "framer-motion";
 import ProjectNavigationBar from "./ProjectNavigationBar.jsx";
 import Paragraph from "./Paragraph.jsx";
-import React, {useEffect} from "react";
-import tech from "./Tech.jsx";
 import ButtonPortfolio from "./ButtonPortfolio.jsx";
 import Footer from "./Footer.jsx";
-
+import { FaChevronDown } from "react-icons/fa"; // Scroll down icon
 
 export default function ProjectPage() {
-
     useEffect(() => {
-        window.scrollTo(0, 0); // Scroll to top-left
+        window.scrollTo(0, 0);
     }, []);
-    const {id} = useParams();
-    console.log(id);
+
+    const { id } = useParams();
     const project = projects.find(p => p.id === id);
+    if (!project) return <div className="p-6">Error! Project not found</div>;
 
     const navigateGitHub = () => {
         window.open(project.repo, "_blank");
-    }
-    const navigateVideoYT = (linkVideo) => {
-        window.open(linkVideo, "_blank");
-    }
-    console.log(projects);
+    };
 
-    if (!project) {
-        return <div className="p-6">Error! Project not found</div>;
-    }
+    const hasVideo = project.paragraphs.some(p => p.title.includes("Watch"));
 
-    const hasVideo = project.paragraphs.filter(p => p.title.includes('Watch')).length > 0;
-    const visibility = hasVideo ? 'visible' : 'invisible';
-    const paragraphCount = project.paragraphs.length;
+    // Scroll handler
+    const handleScroll = () => {
+        const element = document.getElementById("project-content");
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
 
     const getGridColsClass = () => {
-        if (paragraphCount <= 1) return "grid-cols-1";
-        if (paragraphCount <= 4) return "grid-cols-2";
-        if (paragraphCount > 4) return "grid-cols-3";
+        const count = project.paragraphs.length;
+        if (count <= 1) return "grid-cols-1";
+        if (count <= 4) return "grid-cols-2";
+        return "grid-cols-3";
     };
-    const indexes = new Set();
-    const randomProjects = [];
-    while (indexes.size < 4) {
-        let randomIndex = Math.floor(Math.random() * projects.length);
-        if (projects[randomIndex].id !== project.id) {
-            indexes.add(randomIndex);
-        }
-    }
-    for (const val of indexes) {
-        randomProjects.push(projects[val]);
-    }
-    console.log("Random projects: " + Array.from(randomProjects));
+
+    const randomProjects = projects
+        .filter(p => p.id !== project.id)
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 4);
+
     return (
-        <div className="flex flex-col justify-col bg-eerieBlack align-items-center align-middle ">
-            <ProjectNavigationBar/>
-            <div className="relative flex flex-col h-full w-full justify-col sm: mt-100 md:mt-40 md:mb-40">
-                <div className="flex flex-col gap-1">
-                    <h1 className="flex text-4xl font-extrabold font-mova justify-center">{project.name.toUpperCase()}</h1>
-                    <p className="flex text-lg font-bold text-gray-500 justify-center ">{project.type}</p>
+        <div className="flex flex-col bg-eerieBlack items-center">
+            <ProjectNavigationBar />
+
+            {/* HERO SECTION */}
+            <div className="relative h-screen w-full flex flex-col justify-center items-center text-center px-4">
+                <h1 className="text-3xl md:text-5xl font-extrabold font-mova text-white">{project.name.toUpperCase()}</h1>
+                <p className="text-gray-400 text-sm md:text-base mt-2">{project.type}</p>
+                <div className="mt-6">
+                    <ButtonPortfolio onClick={navigateGitHub} src={github} text="CHECK IT ON GITHUB!" />
                 </div>
 
+                {/* Scroll down icon */}
+                <div onClick={handleScroll} className="absolute bottom-10 cursor-pointer animate-bounce text-white">
+                    <FaChevronDown size={24} />
+                </div>
             </div>
-            <ButtonPortfolio onClick={navigateGitHub} src={github} text="CHECK IT ON GITHUB!"/>
-            <div className="flex flex-row justify-center md:mt-80 md:m-10 lg:mt-135">
-                <div className="flex flex-col w-1/2 mr-5 items-center md:mt-10 lg:mt-40">
-                    <div className="flex flex-col mt-10">
-                        <h2 className="flex text-2xl font-mova font-semibold justify-center align-middle">ABOUT</h2>
-                        <p className="flex mt-5 text-sm text-white-100 align-middle justify-center">{project.description}</p>
-                        <h2 className="flex text-2xl font-mova font-semibold justify-center align-middle mt-10">TECHNOLOGIES</h2>
-                        <div className="grid grid-cols-3 mx-auto justify-start text-white contrast-200 mt-10">
-                            {project.technologies.map((technology) => (
-                                <motion.div whileHover={{y: -5, opacity: 0.8}}
-                                            transition={{duration: 0.3}}
-                                            className="flex flex-col"
-                                            key={technology.name}
-                                >
-                                    <BallCanvas icon={technology.icon}/>
-                                    <motion.a
-                                        whileHover={{scale: 1.1}}
-                                        className="text-2xl text-white contrast-200 items-center mx-auto"
-                                    >{technology.name}</motion.a>
+
+            {/* FULL CONTENT SECTION */}
+            <div id="project-content" className="w-full px-4">
+                <div className="flex flex-col md:flex-row justify-center items-center mt-10 gap-8">
+                    <div className="md:w-1/2 w-full flex flex-col items-center">
+                        <h2 className="text-xl sm:text-2xl font-semibold">ABOUT</h2>
+                        <p className="mt-4 text-white text-sm">{project.description}</p>
+
+                        <h2 className="text-xl sm:text-2xl font-semibold mt-10">TECHNOLOGIES</h2>
+                        <div className="grid grid-cols-3 gap-4 mt-6">
+                            {project.technologies.map(tech => (
+                                <motion.div key={tech.name} whileHover={{ y: -5 }} className="flex flex-col items-center">
+                                    <BallCanvas icon={tech.icon} />
+                                    <span className="text-white mt-2">{tech.name}</span>
                                 </motion.div>
                             ))}
                         </div>
                     </div>
 
+                    <img src={project.image} alt="project" className="w-full md:w-1/2 h-auto rounded-xl" />
                 </div>
-                <img src={project.image} alt="image" className="w-1/2 h-1/3 mt-5 rounded-2xl "/>
-            </div>
-            <ul className={`grid ${getGridColsClass()} px-10 md:gap-x-10`}>{
-                project.paragraphs.filter(p => !p.title.includes('Watch')).map(paragraph => (
-                    <li className="mx-auto" key={paragraph.title}>
-                        <Paragraph paragraph={paragraph}/>
-                    </li>
-                ))
-            }
-            </ul>
-            <div id="video" className={`flex flex-col items-center mb-20 ${visibility}`}>
-                <h2 className="text-2xl font-bold mb-10">DEMO</h2>
-                {project.paragraphs
-                    .filter(p => p.title.includes('Watch'))
-                    .map(watchVideo => {
-                        const videoID = new URL(watchVideo.link).searchParams.get("v");
-                        const embedUrl = `https://www.youtube.com/embed/${videoID}`;
 
-                        return (
-                            <div key={watchVideo.title.toString().toUpperCase()}
-                                 className="w-full flex justify-center mb-10">
-                                <iframe
-                                    width="560"
-                                    height="315"
-                                    src={embedUrl}
-                                    title={watchVideo.title.toString().toUpperCase()}
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                />
-                            </div>
-                        );
-                    })}
-                <ButtonPortfolio onClick={navigateVideoYT} src={yt} text="WATCH IT ON YOUTUBE!"/>
+                <ul className={`grid ${getGridColsClass()} gap-6 mt-10`}>
+                    {project.paragraphs.filter(p => !p.title.includes('Watch')).map(paragraph => (
+                        <li key={paragraph.title}><Paragraph paragraph={paragraph} /></li>
+                    ))}
+                </ul>
 
-            </div>
-            <h2 className="flex justify-center font-bold font-mova">OTHER PROJECTS</h2>
-            <ul className="grid grid-cols-4 gap-20 m-10">{
-                randomProjects.map((randomProject, index) => (
-                    <li className="relative group w-60 h-60 rounded-xl overflow-hidden" key={index}>
-                            <Link to={`/projects/${randomProject.id}`}>
-                            <img src={randomProject.image} className="w-full h-full rounded-xl transition-opacity duration-100"
-                                 alt="image"/>
-                            <div
-                                className="absolute inset-0 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-100">
-                                <p className="text-2xl text-white font-mova mx-auto">{randomProject.name}</p>
+                {hasVideo && (
+                    <div className="w-full mt-10 mb-20">
+                        <h2 className="text-xl font-bold text-center mb-6">DEMO</h2>
+                        {project.paragraphs.filter(p => p.title.includes('Watch')).map(watchVideo => {
+                            const videoID = new URL(watchVideo.link).searchParams.get("v");
+                            return (
+                                <div key={watchVideo.title} className="aspect-video sm:aspect-w-16 sm:aspect-h-9 w-full max-w-screen-md mx-auto mb-6">
+                                    <iframe
+                                        className="w-full h-full"
+                                        src={`https://www.youtube.com/embed/${videoID}`}
+                                        title={watchVideo.title}
+                                        allowFullScreen
+                                    />
+                                </div>
+                            );
+                        })}
+                    </div>
+                )}
 
-                            </div>
+                <h1 className="flex text-2xl sm:text-xl font-bold font-mova mt-10 mx-auto items-center justify-center">OTHER PROJECTS</h1>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 m-10">
+                    {randomProjects.map((proj, index) => (
+                        <li key={index} className="relative group w-full h-60 rounded-xl overflow-hidden">
+                            <Link to={`/projects/${proj.id}`}>
+                                <img src={proj.image} className="w-full h-full object-cover rounded-xl" />
+                                <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <p className="text-white text-lg">{proj.name}</p>
+                                </div>
                             </Link>
-                    </li>
-                ))
-            }
-            </ul>
-            <Footer/>
+                        </li>
+                    ))}
+                </ul>
+
+                <Footer />
+            </div>
         </div>
     );
 }
