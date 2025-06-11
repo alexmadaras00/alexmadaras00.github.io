@@ -50,7 +50,7 @@ export default function ProjectPage() {
         <div className="flex flex-col bg-eerieBlack items-center">
             <ProjectNavigationBar />
 
-            {/* HERO SECTION */}
+
             <div className="relative h-screen w-full flex flex-col justify-center items-center text-center px-4">
                 <h1 className="text-3xl md:text-5xl font-extrabold font-mova text-white">{project.name.toUpperCase()}</h1>
                 <p className="text-gray-400 text-sm md:text-base mt-2">{project.type}</p>
@@ -58,13 +58,12 @@ export default function ProjectPage() {
                     <ButtonPortfolio onClick={navigateGitHub} src={github} text="CHECK IT ON GITHUB!" />
                 </div>
 
-                {/* Scroll down icon */}
+
                 <div onClick={handleScroll} className="absolute bottom-10 cursor-pointer animate-bounce text-white">
                     <FaChevronDown size={24} />
                 </div>
             </div>
 
-            {/* FULL CONTENT SECTION */}
             <div id="project-content" className="w-full px-4">
                 <div className="flex flex-col md:flex-row justify-center items-center mt-10 gap-8">
                     <div className="md:w-1/2 w-full flex flex-col items-center">

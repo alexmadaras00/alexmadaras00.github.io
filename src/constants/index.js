@@ -166,10 +166,10 @@ const exp = [
 const storyParagraphs = ["🦹‍♂️I am Alex Mădăras, a 24 y.o. aspiring Full-Stack Engineer and Tour Guide sometimes in the Netherlands at the University of Twente, expected to graduate at the beginning of 2025. I was born and raised in 🇷🇴Romania but moved to Enschede, 🇳🇱Netherlands in 2022 to pursue my Master's Degree.",
     "💻Since I was 14, I was passionate about technology, and travelling, constantly looking for automated solutions that could it improve peoples' lives. This curiosity motivated me to follow a Bachelor's Degree of Computer Science, and now the Master in Computer Science.",
     "🗺️Tour Guide in my free time with 28 countries visited and an adventurous personality, at 19 y.o. I embarced on my first Erasmus Mobility at the other edge of Europe: in the capital of Portugal - Lisbon, where I discovered my deep passion for Android Development which pushed me to a Summer Internship in the upcoming summer.",
-    "🇳🇱Ambitious enough after surviving my first experience abroad, I decided to take a new challenge: this time for real. Thus, after graduating with my Bachelor's at the West University of Timisoara, I moved to another culturally rich pole of Europe: the Netherlands,🎓.",
+    "🎓Ambitious enough after surviving my first experience abroad, I decided to take a new challenge: this time for real. Thus, after graduating with my Bachelor's at the West University of Timisoara, I enrolled for a Master's Degree in another culturally rich pole of Europe: the Netherlands,🇳🇱.",
     "💡During my two-year Master's specialising in Software Technology, I learnt several important skills: from Software Management and Requirement Negotiation to Software Engineering Techniques and applying SOLID code principles to build a Java board game and developing LLMs for banks (ING).",
     "🏦My journey didn't end here, as after my LLM project with ING, I joined them in an Internship for my Master's Thesis which is ongoing, building AI models and working with professionals and veterans in the banking industry.",
-    "I'm always excited to see what the future will bring!"]
+    "I'm always excited to see what the future will bring! xD"]
 
 
 const projects = [{
