@@ -10,10 +10,10 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`${styles.paddingX} fixed top-0 z-20 w-full shadow-2xl bg-lisbon sm:opacity-95 xxs:h-[12vh]`}
+            className="fixed top-0 left-0 z-50 w-full shadow-2xl bg-lisbon sm:opacity-95 xxs:h-[12vh]"
             style={{ backgroundColor: '#003739' }}
         >
-            <div className="flex justify-between items-center w-full max-w-7xl mx-auto">
+            <div className="flex justify-between items-center w-full space-x-4 ml-4 mr-4">
                 {/* Logo */}
                 <Link
                     to="/"
@@ -32,7 +32,7 @@ export default function Navbar() {
                 </Link>
 
                 {/* Desktop Nav Links */}
-                <ul className="hidden sm:flex gap-12 items-center">
+                <ul className="hidden sm:flex gap-10 items-center m-4">
                     {navLinks.map((nav) => (
                         <li
                             key={nav.id}
