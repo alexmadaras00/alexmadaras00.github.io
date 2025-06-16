@@ -50,14 +50,12 @@ export default function ProjectPage() {
         <div className="flex flex-col bg-eerieBlack items-center">
             <ProjectNavigationBar />
 
-
             <div className="relative h-screen w-full flex flex-col justify-center items-center text-center px-4">
                 <h1 className="text-3xl md:text-5xl font-extrabold font-mova text-white">{project.name.toUpperCase()}</h1>
                 <p className="text-gray-400 text-sm md:text-base mt-2">{project.type}</p>
                 <div className="mt-6">
                     <ButtonPortfolio onClick={navigateGitHub} src={github} text="CHECK IT ON GITHUB!" />
                 </div>
-
 
                 <div onClick={handleScroll} className="absolute bottom-10 cursor-pointer animate-bounce text-white">
                     <FaChevronDown size={24} />
@@ -90,6 +88,7 @@ export default function ProjectPage() {
                     ))}
                 </ul>
 
+                {/** VIDEO */}
                 {hasVideo && (
                     <div className="w-full mt-10 mb-20">
                         <h2 className="text-xl font-bold text-center mb-6">DEMO</h2>
