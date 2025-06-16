@@ -112,7 +112,7 @@ export default function ProjectPage() {
                 <h1 className="flex text-2xl sm:text-xl font-bold font-mova mt-10 mx-auto items-center justify-center">OTHER PROJECTS</h1>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 m-10">
                     {randomProjects.map((proj, index) => (
-                        <li key={index} className="relative group w-full h-60 rounded-xl overflow-hidden">
+                        <li key={index} className="relative group w-full h-full rounded-xl overflow-hidden">
                             <Link to={`/projects/${proj.id}`}>
                                 <img src={proj.image} className="w-full h-full object-cover rounded-xl" />
                                 <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
@@ -123,8 +123,9 @@ export default function ProjectPage() {
                     ))}
                 </ul>
 
-                <Footer />
+
             </div>
+            <Footer />
         </div>
     );
 }
