@@ -4,6 +4,7 @@ import Footer from "./Footer.jsx";
 import {storyParagraphs} from "../constants/index.js";
 import StoryParagraph from "./StoryParagraph.jsx";
 import alexRandom from '../assets/personal/alexRandom.jpg'
+import {alexGraduation, alexGuide} from "../assets/index.js";
 
 export default function Story() {
     return (
@@ -22,15 +23,22 @@ export default function Story() {
                 <ul className="flex flex-col justify-center sm:flex-row gap-4 sm:gap-10 items-center my-5">
                     <li className="w-full max-w-xs">
                         <img
-                            src={alexNature}
-                            alt="alexNature"
+                            src={alexRandom}
+                            alt="alexRandom"
                             className="w-full h-auto rounded-2xl shadow-md"
                         />
                     </li>
                     <li className="w-full max-w-xs">
                         <img
-                            src={alexRandom}
-                            alt="alexRandom"
+                            src={alexGraduation}
+                            alt="alexGraduation"
+                            className="w-full h-auto rounded-2xl shadow-md"
+                        />
+                    </li>
+                    <li className="w-full max-w-xs">
+                        <img
+                            src={alexGuide}
+                            alt="alexGuide"
                             className="w-full h-auto rounded-2xl shadow-md"
                         />
                     </li>

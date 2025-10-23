@@ -12,6 +12,8 @@ import logotext from './logo/logo-text-black.png';
 
 import shaq from './personal/shaq.png';
 import alex from './personal/alex.png';
+import alexGraduation from "./personal/alexGraduate.png";
+import alexGuide from "./personal/alexGuide.png";
 
 import backend from './icons/backend.png';
 import ux from './icons/ux.png';
@@ -175,6 +177,7 @@ export {
     role,
     solution,
     story,
+    alexGraduation,
     tdd,
     technology,
     uni,
@@ -227,5 +230,6 @@ export {
     rapidapi,
     intelij,
     insomnia,
-    jsonPic
+    jsonPic,
+    alexGuide
 };

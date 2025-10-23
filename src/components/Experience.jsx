@@ -61,7 +61,7 @@ const Experience = () => {
               ease-in-out"
               onClick={() =>
                 window.open(
-                  './CV.pdf', //paste the link to your resume here
+                  './CV Alex Madaras.pdf', //paste the link to your resume here
                   '_blank'
                 )
               }
