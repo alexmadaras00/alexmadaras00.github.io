@@ -14,9 +14,9 @@ function About() {
                 <div className="bg-customGreen-200 rounded-lg shadow-md p-4 m-4">
                     <h2 className="text-center font-bold font-mova text-2xl text-[#69896E] mb-2">INTRO</h2>
                     <p>
-                        From developing web apps to tour guiding, I thrive at the intersection of curiosity and code.
-                        Hi! I’m Alex, a passionate <span className="font-bold">Software Developer</span> who loves building meaningful,
-                        user-centered software products 💻✨.
+                        From developing web apps to tour guiding, I thrive at the intersection of innovation and code.
+                        Hi! I’m Alex, a passionate <span className="font-bold">Technical Business Analyst</span> who loves owning and facilitating meaningful,
+                        user-centered end-to-end software products 💻✨.
                     </p>
                 </div>
 
@@ -33,9 +33,8 @@ function About() {
                 <div className="bg-customGreen-200 rounded-lg p-4 shadow-md m-4">
                     <h2 className="text-center font-bold font-mova text-2xl text-[#69896E] mb-2">QUALITIES</h2>
                     <p>
-                        I’m interested in both web 🌐 and Android 📱 development, with academic and professional
-                        experience in Java ☕, Spring Boot 🌱, HTML/CSS 🎨, JavaScript ⚡, and Kotlin 🧩. Currently, I’m focusing on
-                        personal projects to strengthen my React skills ⚛️.
+                        I’m interested in turning ideas into innovative software projects, with academic and professional
+                        experience in React⚛️, Java ☕, Spring Boot 🌱, HTML/CSS 🎨, JavaScript ⚡, Python🐍, SQL⛁ and Kotlin 🧩.
                     </p>
                 </div>
 
@@ -43,10 +42,10 @@ function About() {
                 <div className="bg-customGreen-200 rounded-lg p-4 shadow-md">
                     <h2 className="text-center font-bold font-mova text-2xl text-[#69896E] mb-2">HOBBIES</h2>
                     <p >
-                        Outside of tech, I’m co-building a travel startup 🧳 with friends, and running a history-focused
+                        Outside of tech, I’m co-building an MVP for a travel startup 🧳 with friends, and running a history-focused
                         Instagram channel—PocketPedia 📜—where I simplify complex historical topics into short, engaging reels 🎥.
-                        I am a certified Tour Guide in my hometown - Timisoara. I also love learning languages 🗣️ and exploring cultures 🌏.
-                        I’m currently learning Dutch 🇳🇱 and already have an A1 certificate!
+                        I am a certified Tour Guide in my hometown - Timisoara, where I am currently running and managing my own tour on the <a href="https://www.guruwalk.com/walks/64229-timisoara-essentials-tour-with-alex-discover-the-city">GuruWalk</a> platform. I also love learning languages 🗣️ and exploring cultures 🌏.
+                        I also love foreign languages, currently learning Italian🇮🇹, already possessing a Dutch 🇳🇱 A1 certificate!
                     </p>
                 </div>
 
@@ -66,7 +65,7 @@ function About() {
                 <div className="bg-customGreen-200 rounded-lg p-4 shadow-md m-4">
                     <h2 className="text-center font-bold font-mova text-2xl text-[#69896E] mb-2">GOALS</h2>
                     <p>
-                        I’m actively looking for junior developer roles 👨‍💻 where I can grow 🌱 and contribute to impactful projects 💪.
+                        I’m actively looking for Business Analyst roles 👨‍💻 where I can grow 🌱 and contribute to impactful projects 💪.
                         Let’s connect! If you have exciting projects, I’d love to collaborate.
                     </p>
                 </div>

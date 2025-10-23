@@ -121,8 +121,6 @@ export default function ProjectPage() {
                         </li>
                     ))}
                 </ul>
-
-
             </div>
             <Footer />
         </div>
