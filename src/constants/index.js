@@ -163,13 +163,25 @@ const exp = [
         date: 'Sep 2019 - Aug 2022',
     }];
 
-const storyParagraphs = ["🦹‍♂️I am Alex Mădăras, a 24 y.o. aspiring Full-Stack Engineer and Tour Guide sometimes in the Netherlands at the University of Twente, expected to graduate at the beginning of 2025. I was born and raised in 🇷🇴Romania but moved to Enschede, 🇳🇱Netherlands in 2022 to pursue my Master's Degree.",
-    "💻Since I was 14, I was passionate about technology, and travelling, constantly looking for automated solutions that could it improve peoples' lives. This curiosity motivated me to follow a Bachelor's Degree of Computer Science, and now the Master in Computer Science.",
-    "🗺️Tour Guide in my free time with 28 countries visited and an adventurous personality, at 19 y.o. I embarced on my first Erasmus Mobility at the other edge of Europe: in the capital of Portugal - Lisbon, where I discovered my deep passion for Android Development which pushed me to a Summer Internship in the upcoming summer.",
-    "🎓Ambitious enough after surviving my first experience abroad, I decided to take a new challenge: this time for real. Thus, after graduating with my Bachelor's at the West University of Timisoara, I enrolled for a Master's Degree in another culturally rich pole of Europe: the Netherlands,🇳🇱.",
-    "💡During my two-year Master's specialising in Software Technology, I learnt several important skills: from Software Management and Requirement Negotiation to Software Engineering Techniques and applying SOLID code principles to build a Java board game and developing LLMs for banks (ING).",
-    "🏦My journey didn't end here, as after my LLM project with ING, I joined them in an Internship for my Master's Thesis which is ongoing, building AI models and working with professionals and veterans in the banking industry.",
-    "I'm always excited to see what the future will bring! xD"]
+const storyParagraphs = [
+    {
+        title: "My Journey: From Code Enthusiast to Technical Business Analyst",
+        content: "🦹‍♂️I am Alex Madaras, a 24 y.o. aspiring Business Analyst/Product Strategist and Tour Guide, located in Timisoara, Romania. I lived in Enschede, Netherlands for 2.5 years to pursue my Master's Degree in Computer Science, and return home."
+    },
+    {
+        title: "The Spark: Code, Curiosity, and Travel",
+        content: "💻Since I was teenager, I was passionate about technology, and travelling, constantly looking for automated solutions that could it improve peoples' lives. This curiosity motivated me to follow a Bachelor's Degree of Computer Science, then the Master in Computer Science.\n\n🗺️Adventurous personality, with 25+ countries visited, at just 19 y.o. I embarked on my first Erasmus Mobility at the other edge of Europe: in the capital of Portugal - Lisbon, where I discovered my passion for innovative technology which pushed me to a Summer Internship in the upcoming summer."
+    },
+    {
+        title: "Academic Rigor and Professional Impact",
+        content: "🎓Ambitious enough after surviving my first experience abroad, I decided to take a new challenge: this time for real. Thus, after graduating with my Bachelor's at the West University of Timisoara, I enrolled for a Master's Degree in another culturally rich pole of Europe: the Netherlands,🇳🇱.\n\n💡During my two-year Master's in Computer Science, I learnt several important skills: from Software Management and Requirement Negotiation to Software Engineering Techniques and applying SOLID code principles to build a web sites and developing LLMs for banks (ING).\n\n🏦My journey didn't end here, as after my LLM project with ING, I joined them in an Internship for my Master's Thesis, building AI models (Python, SQL) and delivering business solutions, while collaborating with professionals and veterans in the banking industry."
+    },
+    {
+        title: "Connecting People and Products",
+        content: "👥My journey is rounded out by my extracurricular activity as a Tour Guide, a role I perform in my free time. This has been crucial in shaping my soft skills, ensuring I can make complex information digestible and engaging for diverse international audiences.\n\nI'm always excited to see what the future will bring! xD"
+    }
+];
+
 
 
 const projects = [{
