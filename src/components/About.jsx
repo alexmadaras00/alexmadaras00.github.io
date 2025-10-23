@@ -25,7 +25,9 @@ function About() {
                     <h2 className="text-center font-bold font-mova text-2xl text-[#69896E] mb-2">MOTIVATION</h2>
                     <p>
                         I’m driven by curiosity and a desire to solve real-world problems 🌍 using modern technologies 🚀.
-                        My goal is to create tools that connect 🤝 and empower people’s lives 💡.
+                        My goal is to create tools that connect 🤝 and empower people’s lives 💡, facilitating the communication between the
+                        business stakeholders and technical teams🛠️. I love owning product's vision from start to the end of its lifecycle,
+                        negotiating features, facilitating meetings and constantly bringing change and new ideas💡.
                     </p>
                 </div>
 
@@ -33,7 +35,9 @@ function About() {
                 <div className="bg-customGreen-200 rounded-lg p-4 shadow-md m-4">
                     <h2 className="text-center font-bold font-mova text-2xl text-[#69896E] mb-2">QUALITIES</h2>
                     <p>
-                        I’m interested in turning ideas into innovative software projects, with academic and professional
+                        I’m an ambitious, creative and collaborative individual, interested in turning ideas into innovative software projects.
+                        More exactly, I see myself being the bridge between stakeholder requirements and technical implementations. I'm equipped with
+                        strong communication skills, and soft skills, completed by technical skillset, gathering
                         experience in React⚛️, Java ☕, Spring Boot 🌱, HTML/CSS 🎨, JavaScript ⚡, Python🐍, SQL⛁ and Kotlin 🧩.
                     </p>
                 </div>
@@ -42,9 +46,9 @@ function About() {
                 <div className="bg-customGreen-200 rounded-lg p-4 shadow-md">
                     <h2 className="text-center font-bold font-mova text-2xl text-[#69896E] mb-2">HOBBIES</h2>
                     <p >
-                        Outside of tech, I’m co-building an MVP for a travel startup 🧳 with friends, and running a history-focused
-                        Instagram channel—PocketPedia 📜—where I simplify complex historical topics into short, engaging reels 🎥.
-                        I am a certified Tour Guide in my hometown - Timisoara, where I am currently running and managing my own tour on the <a href="https://www.guruwalk.com/walks/64229-timisoara-essentials-tour-with-alex-discover-the-city">GuruWalk</a> platform. I also love learning languages 🗣️ and exploring cultures 🌏.
+                        Outside of tech, I’m co-building an MVP for a travel project🧳 with friends, and running a history-focused
+                        Instagram channel— <a href="https://www.instagram.com/pocketwikipedia/" className="font-bold font-mova underline">PocketPedia 📜 </a>, where I simplify complex historical topics into short, engaging reels 🎥.
+                        I am a certified Tour Guide in my hometown - Timisoara, where I am currently running and managing my own tour on the <a href="https://www.guruwalk.com/walks/64229-timisoara-essentials-tour-with-alex-discover-the-city" className="font-bold font-mova underline">GuruWalk</a> platform. I also love learning languages 🗣️ and exploring cultures 🌏.
                         I also love foreign languages, currently learning Italian🇮🇹, already possessing a Dutch 🇳🇱 A1 certificate!
                     </p>
                 </div>
