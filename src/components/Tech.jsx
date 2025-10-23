@@ -10,7 +10,7 @@ export default function Tech() {
             <div className="p-2 sm:p-6">
                 <div className="bg-customGreen-10 rounded-2xl shadow-md border-spacing-1 pt-6 px-4 sm:px-10">
                     <h2 className="flex justify-center items-end font-mova mb-10 text-3xl sm:text-5xl text-center">
-                        SKILLS
+                        TECHNICAL SKILLS
                     </h2>
                     <div className="grid grid-cols-3 sm:flex sm:flex-wrap justify-center gap-4 sm:gap-8 mb-20 text-white contrast-200">
                         {skills.map((skill) => (

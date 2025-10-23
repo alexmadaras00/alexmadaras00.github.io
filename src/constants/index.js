@@ -189,7 +189,7 @@ const projects = [{
     name: 'Trip Palette',
     type: 'Web Application',
     description: 'Trip Palette is an innovative trip-planning platform that guides users from start to finish with a quick, simple, and personalized approach. Unlike existing applications, which focus on limited features like maps or route finding, Trip Palette AI considers a traveler’s unique preferences, including group type, desired activities, budget, and more. Users can plan trips, book accommodations, connect with communities, and share feedback to improve recommendations.',
-    technologies: [{name: 'IntelIJ', icon: intelij}, {
+    technologies: [ {
         name: 'Java', icon: java,
     }, {
         name: 'Spring Boot', icon: spring,
