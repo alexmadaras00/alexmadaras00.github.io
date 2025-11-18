@@ -35,7 +35,7 @@ export default function Hero() {
                         </div>
                     </a>
                 </div>
-                <div className="absolute left-0.5 -translate-y-0">
+                <div className="relative flex-col justify-center content-center ml-2 -translate-y-4">
                     <h1 className={`${styles.heroHeadText} text-#EADDFF font-poppins uppercase`}
                         style={{color: '#003739'}}>
                         Hi, I'm
