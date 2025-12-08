@@ -15,7 +15,7 @@ function About() {
                     <h2 className="text-center font-bold font-mova text-2xl text-[#69896E] mb-2">INTRO</h2>
                     <p>
                         From developing web apps to tour guiding, I thrive at the intersection of innovation and code.
-                        Hi! I’m Alex, a passionate <span className="font-bold">Technical Business Analyst</span> who loves owning and facilitating meaningful,
+                        Hi! I’m Alex, a passionate <span className="font-bold">Technical Data Analyst</span> who loves owning and facilitating meaningful,
                         user-centered end-to-end software products 💻✨.
                     </p>
                 </div>
@@ -69,7 +69,7 @@ function About() {
                 <div className="bg-customGreen-200 rounded-lg p-4 shadow-md m-4">
                     <h2 className="text-center font-bold font-mova text-2xl text-[#69896E] mb-2">GOALS</h2>
                     <p>
-                        I’m actively looking for Business Analyst roles 👨‍💻 where I can grow 🌱 and contribute to impactful projects 💪.
+                        I’m actively looking for Technical Data Analyst using my Python and SQL skills, 👨‍💻 where I can grow 🌱 and contribute to impactful projects 💪.
                         Let’s connect! If you have exciting projects, I’d love to collaborate.
                     </p>
                 </div>

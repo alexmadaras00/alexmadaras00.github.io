@@ -165,8 +165,8 @@ const exp = [
 
 const storyParagraphs = [
     {
-        title: "My Journey: From Code Enthusiast to Technical Business Analyst",
-        content: "🦹‍♂️I am Alex Madaras, a 24 y.o. aspiring Business Analyst/Product Strategist and Tour Guide, located in Timisoara, Romania. I lived in Enschede, Netherlands for 2.5 years to pursue my Master's Degree in Computer Science, and return home."
+        title: "My Journey: From Code Enthusiast to Technical Data Analyst",
+        content: "🦹‍♂️I am Alex Madaras, a 24 y.o. aspiring Data Analyst & Product Strategist and Tour Guide, located in Timisoara, Romania. I lived in Enschede, Netherlands for 2.5 years to pursue my Master's Degree in Computer Science, and return home."
     },
     {
         title: "The Spark: Code, Curiosity, and Travel",
